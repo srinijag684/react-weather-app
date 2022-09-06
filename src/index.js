@@ -13,6 +13,7 @@ root.render(
     <a
       href='https://github.com/srinijag684/react-weather-app'
       target="_blank"
+      rel="noreferrer"
     >
       open-sourced on Github
     </a>
