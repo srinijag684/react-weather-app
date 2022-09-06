@@ -8,6 +8,15 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
    <App/>
+   <div>
+    This project is created by Srinija and is 
+    <a
+      href='https://github.com/srinijag684/react-weather-app'
+      target="_blank"
+    >
+      open-sourced on Github
+    </a>
+   </div>
   </React.StrictMode>
 );
 
