@@ -1,4 +1,5 @@
 import {React} from "react"
+import "./Weather.css";
 
 export default function Weather() {
     return(
@@ -23,6 +24,36 @@ export default function Weather() {
                     </div>
                 </div>
             </form>
+            <div className="WeatherInfo">
+                <h1>New York</h1>
+                <ul>
+                    <li>
+                        Wednesday 7.00
+                    </li>
+                    <li>
+                        Mostly Cloudy
+                    </li>
+                </ul>
+            <div className="row mt-3">
+                <div className="col-6">
+                <div className="d-flex">
+                    <div>
+                        <img></img>
+                    </div>
+
+                    <div>
+                        6°C
+                    </div>
+                </div>
+                </div>
+                <div className="col-6">
+                <ul>
+                    <li>Humidity: 21%</li>
+                    <li>Wind: 10km/h</li>
+                </ul>
+                </div>
+            </div>
+            </div>
         </div>
     );
 }
