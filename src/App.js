@@ -4,7 +4,6 @@ import React from 'react';
 function App() {
   return(
   <div className='App'>
-    <div className='container'>
       <div className='footer'>
         This project is created by Srinija and is {" "}
         <a
@@ -15,7 +14,6 @@ function App() {
         open-sourced on Github
         </a>
       </div>
-    </div>
  </div>);
     
   

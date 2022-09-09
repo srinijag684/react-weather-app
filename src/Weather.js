@@ -4,58 +4,50 @@ import "./Weather.css";
 export default function Weather() {
     return(
         <div className="container">
-        <div className="Weather">
-            <form>
-                <div className="row">
-                    <div className="col-9">
-                        <input
-                            type="search"
-                            placeholder="Enter a city.."
-                            className="form-control"
-                            autoFocus="on"
-                        />
-                    </div>
+          <form className="searchCity" id="searchCity">
+            <input
+              type="text"
+              placeholder="Enter a city"
+              autocomplete="off"
+              class="cityInput"
+              id="city-input"
+            />
+  
+            <input
+             type="submit" 
+             value="Search🔎"
+             class="citySearch" 
+             />
 
-                    <div className="col-3">
-                        <input
-                            type="submit"
-                            value="Search"
-                            className="btn btn-primary w-100"
-                        />
-                    </div>
-                </div>
-            </form>
-            <div className="WeatherInfo">
-                <h1>New York</h1>
-                <ul>
-                    <li>
-                        Wednesday 7.00
-                    </li>
-                    <li>
-                        Mostly Cloudy
-                    </li>
-                </ul>
-            <div className="row mt-3">
-                <div className="col-6">
-                <div className="d-flex">
-                    <div>
-                        
-                    </div>
+          </form>
 
-                    <div>
-                       <h1>6°C</h1>
-                    </div>
-                </div>
-                </div>
-                <div className="col-6">
-                <ul>
-                    <li>Humidity: 21%</li>
-                    <li>Wind: 10km/h</li>
-                </ul>
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
+            <h1 className = "country" id="Country">
+                New York
+            </h1>
+  
+            <p>
+                Friday 10:00
+              <span id = "date"></span>
+            </p>
+  
+            <p>
+                Mostly Cloudy
+              <span id="desc"></span>
+            </p>
+  
+            <p>
+              Wind Speed: 10Km/H
+              <span id="wind"></span>
+            </p>
+
+            <p>
+              Humidity: 72%
+              <span id="humid"></span>
+            </p>
+  
+            <h1 class="temp-day" id="temp">
+                6°C
+            </h1>
+          </div>
     );
 }
