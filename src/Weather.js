@@ -3,6 +3,7 @@ import "./Weather.css";
 
 export default function Weather() {
     return(
+        <div className="container">
         <div className="Weather">
             <form>
                 <div className="row">
@@ -38,11 +39,11 @@ export default function Weather() {
                 <div className="col-6">
                 <div className="d-flex">
                     <div>
-                        <img></img>
+                        
                     </div>
 
                     <div>
-                        6°C
+                       <h1>6°C</h1>
                     </div>
                 </div>
                 </div>
@@ -54,6 +55,7 @@ export default function Weather() {
                 </div>
             </div>
             </div>
+        </div>
         </div>
     );
 }

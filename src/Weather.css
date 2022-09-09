@@ -1,7 +1,11 @@
 .Weather{
     border: 1p solid #dadde1;
+    display: block;
+    margin: auto 0;
+    text-align: center;
 }
 
 ul{
     list-style-type: none;
 }
+
