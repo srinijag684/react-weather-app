@@ -6,7 +6,9 @@ function App() {
   return(
   <div className='App'>
       <div className='footer'>
-      <Weather defaultCity="Singapore" />
+
+        <Weather defaultCity= "Singapore" />
+
         This project is created by Srinija and is {" "}
         <a
           href='https://github.com/srinijag684/react-weather-app'
@@ -15,8 +17,11 @@ function App() {
         >
         open-sourced on Github
         </a>
+
       </div>
- </div>);
+
+ </div>
+ );
     
   
 }
