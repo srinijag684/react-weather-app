@@ -3,11 +3,7 @@
     margin: auto 0;
     text-align: center;
     border-style: solid;
-    padding: 16px;
-}
-
-ul{
-    list-style-type: none;
+    padding: 20px;
 }
 
 .temp-day .temperature {
