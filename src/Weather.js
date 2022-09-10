@@ -4,50 +4,54 @@ import "./Weather.css";
 export default function Weather() {
     return(
         <div className="container">
+          <div ></div>  
           <form className="searchCity" id="searchCity">
             <input
               type="text"
               placeholder="Enter a city"
               autocomplete="off"
-              class="cityInput"
+              className="cityInput"
               id="city-input"
             />
   
             <input
              type="submit" 
              value="Search🔎"
-             class="citySearch" 
+             className="citySearch" 
              />
 
           </form>
 
-            <h1 className = "country" id="Country">
+            <h1 className = "city">
                 New York
             </h1>
   
             <p>
                 Friday 10:00
-              <span id = "date"></span>
             </p>
   
             <p>
                 Mostly Cloudy
-              <span id="desc"></span>
             </p>
   
             <p>
               Wind Speed: 10Km/H
-              <span id="wind"></span>
             </p>
 
             <p>
               Humidity: 72%
-              <span id="humid"></span>
             </p>
+            
+            <img 
+            src="./img/cloudy.png" 
+            alt="mostly cloudy"
+            />
   
-            <h1 class="temp-day" id="temp">
-                6°C
-            </h1>
+            <div className="temp-day">
+            <span className="temperature">6</span>
+            <span className="unit">°C</span>
+            </div>
+
           </div>
     );
 }
