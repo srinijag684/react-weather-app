@@ -34,7 +34,7 @@ export default function WeatherInfo(props){
             
                         <div className="temp-day">
                             <span className="temperature">{Math.round(props.data.Temp)}</span>
-                            <span className="unit">°C |°F</span>
+                            <span className="unit">°C</span>
                         </div>
                     </div>
                 </div>
