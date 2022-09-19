@@ -31,7 +31,7 @@ export default function WeatherForecast(props)
                         <div className="WeatherForecast-temp">
 
                         <span className="WeatherForecast-temp-max">
-                            19
+                            {forecast[0]}
                         </span>
 
                         <span className="WeatherForecast-temp-min">
