@@ -2,6 +2,7 @@ import {React, useState} from "react"
 import axios from "axios";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
     const [weatherData, setWeatherData] = useState({ready : false});
@@ -11,13 +12,14 @@ export default function Weather(props) {
     {
         setWeatherData({
             ready: true,
+            coord: response.data.coord,
             Temp: response.data.main.temp,
             City: response.data.name,
             Wind: response.data.wind.speed,
             Hum: response.data.main.humidity,
             Des: response.data.weather[0].description,
             Date: new Date(response.data.dt * 1000),
-            Icon: response.data.weather[0].icon
+            Icon: response.data.weather[0].icon,
         })
     }
 
@@ -28,13 +30,16 @@ export default function Weather(props) {
     
       function handleCityChange(event) {
         setCity(event.target.value);
+        
+
       }
 
       function search()
       {
-        const apiKey = "f6c17ad232aa886321714b7bb48bbe9a";
+        const apiKey = "97bed167ec49bff56e6c1b63daef9c86";
         let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-        axios.get(apiUrl).then(handleResponse);
+          axios.get(apiUrl).then(handleResponse);
+      
       }
 
     if(weatherData.ready)
@@ -53,12 +58,13 @@ export default function Weather(props) {
       
                 <input
                  type="submit" 
-                 value="Search🔎"
+                 value="Search 🔎 "
                  className="citySearch" 
                  />
     
               </form>
               <WeatherInfo data={weatherData}/>
+              <WeatherForecast coord={weatherData.coord}/>
             </div>
             
         );
@@ -67,7 +73,7 @@ export default function Weather(props) {
     else
     {
         search();
-        return "loading";
+        //return "loading";
     }
 
     
